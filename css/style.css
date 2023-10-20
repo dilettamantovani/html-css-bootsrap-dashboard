@@ -1,1 +1,9 @@
+.navbar { height: 15vh; }
+
 .fa-bell { color: #FF8F00; }
+
+#sidebar { 
+    height: calc(100% - 15vh); 
+    background-color: rgb(0, 0, 51);
+    background-image: url(../img/sidebar-bg.png);
+}
