@@ -1,11 +1,16 @@
-:root { --navbar-height: 5rem }
+:root { 
+    --navbar-height: 4rem;
+    --sidebar-width: 7rem;
+}
 
 #wrapper {
     height: 100vh;
     width: 100%;
 }
 
-/***************** HEADER *****************/
+.no_pad { padding: 0; }
+
+/********************************** HEADER **********************************/
 header { 
     height: var(--navbar-height);
     width: 100%;
@@ -17,17 +22,37 @@ header {
 #small_logo { max-width: 3rem; }
 
 /* search bar */
-#searchIcon { padding: 0.5rem 0.5rem 0; }
+#my_input .form-control, #searchIcon { background-color: #DEE2E6; }
+
+#searchIcon { 
+    padding: 0.7rem 0.2rem 0 0.6rem; 
+    border-radius: 6px 0 0 6px;
+}
 
 .fa-bell { color: #FF8F00; }
 
 .dropdown-toggle::after { display: none }
 
 
-/***************** MAIN *****************/
-#sidebar { 
-    height: calc(100vh - 5rem);
-    width: 10rem; 
-    background-color: rgb(0, 0, 51);
+/********************************** MAIN **********************************/
+
+#my_sidebar { 
+    height: calc(100vh - var(--navbar-height));;
+    width: var(--sidebar-width); 
+    background-color: #051E34;
     background-image: url(../img/sidebar-bg.png);
 }
+
+.sidebarItem { font-size: 0.8rem; }
+
+.fa-home, .fa-chart-simple, .fa-signal { width: 1.4rem; }
+
+#course_content { width: calc(100vw - var(--sidebar-width)); }
+
+
+
+
+
+
+
+.bg-pink {background-color: pink;}
