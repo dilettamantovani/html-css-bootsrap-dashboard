@@ -1,6 +1,5 @@
 :root { 
     --navbar-height: 4rem;
-    --sidebar-width: 7rem;
 }
 
 #wrapper {
@@ -36,9 +35,10 @@ header {
 
 /********************************** MAIN **********************************/
 
+/* sidebar */
 #my_sidebar { 
     height: calc(100vh - var(--navbar-height));;
-    width: var(--sidebar-width); 
+    width: 2.8rem; 
     background-color: #051E34;
     background-image: url(../img/sidebar-bg.png);
 }
@@ -47,12 +47,31 @@ header {
 
 .fa-home, .fa-chart-simple, .fa-signal { width: 1.4rem; }
 
-#course_content { width: calc(100vw - var(--sidebar-width)); }
 
+/* main content */
+#my_course { width: calc(100vw - 2.8rem); }
 
+.course_headerItem { font-size: 0.75rem; }
+
+#offcanvasBtn:hover i { color: #1B72E8 !important; }
+
+#offcanvasBtn:active i { color: #1B72E8 !important; }
+
+.badge { 
+    background-color: #165BBA !important; 
+    font-size: 0.65rem;
+    font-weight: 500;
+}
+
+/* MQ SIDEBAR: ho provato a farla con il cambio variabile del root ma non funzionava */
+@media screen and (min-width: 576px) {
+    #my_sidebar {width: 8rem;}    
+    #my_course { width: calc(100vw - 8rem); }
+}
 
 
 
 
 
 .bg-pink {background-color: pink;}
+.bg-yellow {background-color: yellow;}
