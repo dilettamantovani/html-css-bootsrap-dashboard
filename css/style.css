@@ -37,7 +37,7 @@ header {
 
 /* sidebar */
 #my_sidebar { 
-    height: calc(100vh - var(--navbar-height));;
+    height: calc(100vh - var(--navbar-height));
     width: 2.8rem; 
     background-color: #051E34;
     background-image: url(../img/sidebar-bg.png);
@@ -49,7 +49,11 @@ header {
 
 
 /* main content */
-#my_course { width: calc(100vw - 2.8rem); }
+#my_course { 
+    height: calc(100vh - var(--navbar-height));
+    width: calc(100vw - 2.8rem); 
+    overflow-y: scroll;
+}
 
 .course_headerItem { font-size: 0.75rem; }
 
@@ -57,11 +61,27 @@ header {
 
 #offcanvasBtn:active i { color: #1B72E8 !important; }
 
-.badge { 
+#course_header .badge { 
     background-color: #165BBA !important; 
     font-size: 0.65rem;
     font-weight: 500;
 }
+
+/* table */
+
+table { font-size: 0.6rem; }
+
+.w_15 { width: 15rem; }
+
+td { vertical-align: middle; }
+
+td > img, th > img { max-width: 1rem; }
+
+td > button {
+    padding: 0.25rem 0.45rem !important;
+    font-size: 0.6rem !important;
+}
+
 
 /* MQ SIDEBAR: ho provato a farla con il cambio variabile del root ma non funzionava */
 @media screen and (min-width: 576px) {
@@ -73,5 +93,3 @@ header {
 
 
 
-.bg-pink {background-color: pink;}
-.bg-yellow {background-color: yellow;}
