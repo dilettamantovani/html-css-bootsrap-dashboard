@@ -74,8 +74,6 @@ td > button {
 
 .sidebarItem:hover i, .sidebarItem:hover span { color: rgb(196, 219, 239); }
 
-.sidebarItem:hover { text-indent: 0.5rem; }
-
 /********************************** FONT-SIZE **********************************/
 .my_fs_07 { font-size: 0.7rem; }
 
@@ -89,6 +87,7 @@ td > button {
 @media screen and (min-width: 576px) {
     #my_sidebar {width: 8rem;}    
     #my_course { width: calc(100vw - 8rem); }
+    .sidebarItem:hover { text-indent: 0.5rem; }
 }
 
 @media screen and (max-width: 768px) {
