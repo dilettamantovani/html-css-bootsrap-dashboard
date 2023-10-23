@@ -1,509 +1,881 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.2/css/all.css">
-        <link rel="stylesheet" href="css/style.css">
-        <title>Dashboard</title>
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.2/css/all.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Dashboard</title>
+</head>
 
-    <body>
-        <div id="wrapper" class="d-flex flex-wrap">
+<body>
+    <div id="wrapper" class="d-flex flex-wrap">
 
-            <!-- HEADER -->
-            <header>
-                <div class="no_pad container-fluid fixed-top">
-                    <nav class="navbar navbar-expand-sm bg-body d-flex align-items-center flex-nowrap">
-    
-                        <div class="container-fluid">
+        <!-- HEADER -->
+        <header>
+            <div class="no_pad container-fluid fixed-top">
+                <nav class="navbar navbar-expand-sm bg-body d-flex align-items-center flex-nowrap">
 
-                            <!-- logo -->
-                            <a href="#">
-                                <img id="big_logo" class="d-none d-md-block" src="img/logo.svg" alt="Logo">
-                                <img id="small_logo" class="d-md-none" class="" src="img/mobile-logo.png" alt="Logo">
-                            </a>
-    
-                            <!-- search bar -->
-                            <div class="container-fluid form-group d-flex align-items-center">
-                                <div id="my_input" class="input-group">
-                                    <span id="searchIcon" class="fa-solid fa-magnifying-glass form-control-feedback"></span>
-                                    <input type="text" class="form-control" type="search"
-                                        placeholder="Prova a cercare: Lezioni di Laravel"
-                                        aria-label="Prova a cercare: Lezioni di Laravel">
-                                </div>
-    
-                                <!-- icons -->
-                                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="#">
-                                                <i class="fa-regular fa-list"></i>
-                                            </a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="#">
-                                                <i class=" fa-solid fa-circle-question"></i>
-                                            </a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="#">
-                                                <i class="fa-solid fa-ellipsis-vertical"></i>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-    
-                            <!-- dropdown -->
-                            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                        aria-expanded="false">
-                                        <i class="fa-solid fa-bell" style="color: #FF8F00;"></i>
-                                    </a>
-                                    <ul class="dropdown-menu dropdown-menu-end">
-                                        <li><a class="dropdown-item" href="#">Action</a></li>
-                                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                                        <li>
-                                            <hr class="dropdown-divider">
-                                        </li>
-                                        <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
-                    </nav>
-                </div>
-            </header>
-    
-            <!-- MAIN -->
-            <main>
-                <div class="no_pad container-fluid d-flex">
+                    <div class="container-fluid">
 
-                    <!-- SIDEBAR -->
-                    <section id="my_sidebar" class="d-grid flex-column p-3">
-                        <div class="d-flex flex-column">
-                            <a class="sidebarItemmy_fs_09  link-light text-decoration-none fw-semibold my_fs_09 py-1" href="#">
-                                <i class="fa-solid fa-home me-1"></i> <span class="d-none d-sm-inline">Home</span>
-                            </a>
-                            <a class="sidebarItem link-light text-decoration-none fw-semibold my_fs_09 py-1" href="#">
-                                <i class="fa-solid fa-chart-simple me-1"></i> <span class="d-none d-sm-inline">Stats</span>
-                            </a>
-                            <a class="sidebarItem link-light text-decoration-none fw-semibold my_fs_09 py-1" href="#">
-                                <i class="fa-solid fa-signal me-1"></i> <span class="d-none d-sm-inline">Signals</span>
-                            </a>
-                        </div>
-    
-                        <a class="sidebarItem link-light text-decoration-none fw-semibold my_fs_09 align-self-end" href="#">
-                            <i class="fa-solid fa-gear me-1"></i> <span class="d-none d-sm-inline">Admin</span>
+                        <!-- LOGO -->
+                        <a href="#">
+                            <img id="big_logo" class="d-none d-md-block" src="img/logo.svg" alt="Logo">
+                            <img id="small_logo" class="d-md-none" class="" src="img/mobile-logo.png" alt="Logo">
                         </a>
-                    </section>
-    
-                    <!-- COURSE DASHBOARD -->
-                    <section id="my_course" class="container-fluid overflow-y-auto">
 
-                        <!-- COURSE HEADER -->
-                        <div id="course_header" class="row bg-primary text-white">
-                            <div class="col-12">
-                                <div class="row">
-                                    <div
-                                        class="col-12 d-md-flex justify-content-center col-md-4 col-lg-3 py-1 py-md-3 order-md-3 ">
-                                        <div class="row">
-                                            <div class="col-12 d-flex align-items-center">
-                                                <span class="course_headerItem fw-medium text-white">Nuovo Studente</span>
-                                                <button type="button" id="offcanvasBtn" class="btn btn-outline-light m-2">
-                                                    <i class="fa-solid fa-plus text-white"></i>
-                                                </button>
+                        <!-- SEARCH BAR -->
+                        <div class="container-fluid form-group d-flex align-items-center">
+                            <div id="my_input" class="input-group">
+                                <span id="searchIcon" class="fa-solid fa-magnifying-glass form-control-feedback"></span>
+                                <input type="text" class="form-control" type="search"
+                                    placeholder="Prova a cercare: Lezioni di Laravel"
+                                    aria-label="Prova a cercare: Lezioni di Laravel">
+                            </div>
+
+                            <!-- ICONS -->
+                            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">
+                                            <i class="fa-regular fa-list"></i>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">
+                                            <i class=" fa-solid fa-circle-question"></i>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">
+                                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- DROPDOWN -->
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    <i class="fa-solid fa-bell" style="color: #FF8F00;"></i>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-end">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+        <!-- MAIN -->
+        <main>
+            <div class="no_pad container-fluid d-flex">
+
+                <!-- SIDEBAR -->
+                <section id="my_sidebar" class="d-grid flex-column p-3">
+                    <div class="d-flex flex-column">
+                        <a class="sidebarItem link-light text-decoration-none fw-semibold my_fs_09 py-1"
+                            href="#">
+                            <i class="fa-solid fa-home me-1"></i> <span class="d-none d-sm-inline">Home</span>
+                        </a>
+                        <a class="sidebarItem link-light text-decoration-none fw-semibold my_fs_09 py-1" href="#">
+                            <i class="fa-solid fa-chart-simple me-1"></i> <span class="d-none d-sm-inline">Stats</span>
+                        </a>
+                        <a class="sidebarItem link-light text-decoration-none fw-semibold my_fs_09 py-1" href="#">
+                            <i class="fa-solid fa-signal me-1"></i> <span class="d-none d-sm-inline">Signals</span>
+                        </a>
+                    </div>
+
+                    <a class="sidebarItem link-light text-decoration-none fw-semibold my_fs_09 align-self-end" href="#">
+                        <i class="fa-solid fa-gear me-1"></i> <span class="d-none d-sm-inline">Admin</span>
+                    </a>
+                </section>
+
+                <!-- COURSE DASHBOARD -->
+                <section id="my_course" class="container-fluid overflow-y-auto">
+
+                    <!-- COURSE HEADER -->
+                    <div id="course_header" class="row bg-primary text-white">
+                        <div class="col-12">
+                            <div class="row">
+
+                                <!-- NEW STUDENT -->
+                                <div class="col-12 d-md-flex justify-content-center col-md-4 col-lg-3 py-1 py-md-3 order-md-3 ">
+                                    <div class="row">
+                                        <div class="col-12 d-flex align-items-center">
+                                            <span class="my_fs_075 fw-medium text-white">Nuovo Studente</span>
+                                            <button type="button" id="offcanvasBtn" class="btn btn-outline-light m-2">
+                                                <i class="fa-solid fa-plus text-white"></i>
+                                            </button>
+
+                                            <!-- OFFCANVAS -->
+                                            <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1"
+                                                id="offcanvasWithBothOptions"
+                                                aria-labelledby="offcanvasWithBothOptionsLabel">
+                                                <div class="offcanvas-header">
+                                                    <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">
+                                                        Inserisci un nuovo studente
+                                                    </h5>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                                                        aria-label="Close"></button>
+                                                </div>
+                                                <div class="offcanvas-body">
+                                                    <form class="row">
+                                                        <div class="col-12 col-sm-6 py-1">
+                                                            <label for="inputName" class="form-label">Nome</label>
+                                                            <input type="text" class="form-control" id="inputName">
+                                                        </div>
+                                                        <div class="col-12 col-sm-6 py-1">
+                                                            <label for="inputSurname" class="form-label">Cognome</label>
+                                                            <input type="text" class="form-control" id="inputSurname">
+                                                        </div>
+
+                                                        <div class="col-12 col-sm-6 py-1">
+                                                            <label class="form-label"
+                                                                for="autoSizingInputGroup">Email</label>
+                                                            <div class="input-group">
+                                                                <div class="input-group-text">@</div>
+                                                                <input type="email" class="form-control"
+                                                                    id="autoSizingInputGroup">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12 col-sm-6 py-1">
+                                                            <label for="inputPassword"
+                                                                class="form-label">Password</label>
+                                                            <input type="password" class="form-control"
+                                                                id="inputPassword">
+                                                        </div>
+                                                        <div class="col-12 py-1">
+                                                            <label for="inputAddress"
+                                                                class="form-label">Indirizzo</label>
+                                                            <input type="text" class="form-control" id="inputAddress">
+                                                        </div>
+
+                                                        <div class="col-12 col-sm-5 col-lg-6 py-1">
+                                                            <label for="inputCity" class="form-label">Città</label>
+                                                            <input type="text" class="form-control" id="inputCity">
+                                                        </div>
+                                                        <div class="col-8 col-sm-4 col-lg-4 py-1">
+                                                            <label for="inputState" class="form-label">Stato</label>
+                                                            <select id="inputState" class="form-select">
+                                                                <option selected>Scegli...</option>
+                                                                <option value="Afghanistan">Afghanistan</option>
+                                                                <option value="Albania">Albania</option>
+                                                                <option value="Algeria">Algeria</option>
+                                                                <option value="American Samoa">American Samoa</option>
+                                                                <option value="Andorra">Andorra</option>
+                                                                <option value="Angola">Angola</option>
+                                                                <option value="Anguilla">Anguilla</option>
+                                                                <option value="Antarctica">Antarctica</option>
+                                                                <option value="Antigua and Barbuda">Antigua and Barbuda
+                                                                </option>
+                                                                <option value="Argentina">Argentina</option>
+                                                                <option value="Armenia">Armenia</option>
+                                                                <option value="Aruba">Aruba</option>
+                                                                <option value="Australia">Australia</option>
+                                                                <option value="Austria">Austria</option>
+                                                                <option value="Azerbaijan">Azerbaijan</option>
+                                                                <option value="Bahamas">Bahamas</option>
+                                                                <option value="Bahrain">Bahrain</option>
+                                                                <option value="Bangladesh">Bangladesh</option>
+                                                                <option value="Barbados">Barbados</option>
+                                                                <option value="Belarus">Belarus</option>
+                                                                <option value="Belgium">Belgium</option>
+                                                                <option value="Belize">Belize</option>
+                                                                <option value="Benin">Benin</option>
+                                                                <option value="Bermuda">Bermuda</option>
+                                                                <option value="Bhutan">Bhutan</option>
+                                                                <option value="Bolivia">Bolivia</option>
+                                                                <option value="Bosnia and Herzegovina">Bosnia and
+                                                                    Herzegovina</option>
+                                                                <option value="Botswana">Botswana</option>
+                                                                <option value="Bouvet Island">Bouvet Island</option>
+                                                                <option value="Brazil">Brazil</option>
+                                                                <option value="British Indian Ocean Territory">British
+                                                                    Indian Ocean Territory</option>
+                                                                <option value="Brunei Darussalam">Brunei Darussalam
+                                                                </option>
+                                                                <option value="Bulgaria">Bulgaria</option>
+                                                                <option value="Burkina Faso">Burkina Faso</option>
+                                                                <option value="Burundi">Burundi</option>
+                                                                <option value="Cambodia">Cambodia</option>
+                                                                <option value="Cameroon">Cameroon</option>
+                                                                <option value="Canada">Canada</option>
+                                                                <option value="Cape Verde">Cape Verde</option>
+                                                                <option value="Cayman Islands">Cayman Islands</option>
+                                                                <option value="Central African Republic">Central African
+                                                                    Republic</option>
+                                                                <option value="Chad">Chad</option>
+                                                                <option value="Chile">Chile</option>
+                                                                <option value="China">China</option>
+                                                                <option value="Christmas Island">Christmas Island
+                                                                </option>
+                                                                <option value="Cocos (Keeling) Islands">Cocos (Keeling)
+                                                                    Islands</option>
+                                                                <option value="Colombia">Colombia</option>
+                                                                <option value="Comoros">Comoros</option>
+                                                                <option value="Congo">Congo</option>
+                                                                <option value="Congo, The Democratic Republic of The">
+                                                                    Congo, The Democratic Republic of The</option>
+                                                                <option value="Cook Islands">Cook Islands</option>
+                                                                <option value="Costa Rica">Costa Rica</option>
+                                                                <option value="Cote D'ivoire">Cote D'ivoire</option>
+                                                                <option value="Croatia">Croatia</option>
+                                                                <option value="Cuba">Cuba</option>
+                                                                <option value="Cyprus">Cyprus</option>
+                                                                <option value="Czech Republic">Czech Republic</option>
+                                                                <option value="Denmark">Denmark</option>
+                                                                <option value="Djibouti">Djibouti</option>
+                                                                <option value="Dominica">Dominica</option>
+                                                                <option value="Dominican Republic">Dominican Republic
+                                                                </option>
+                                                                <option value="Ecuador">Ecuador</option>
+                                                                <option value="Egypt">Egypt</option>
+                                                                <option value="El Salvador">El Salvador</option>
+                                                                <option value="Equatorial Guinea">Equatorial Guinea
+                                                                </option>
+                                                                <option value="Eritrea">Eritrea</option>
+                                                                <option value="Estonia">Estonia</option>
+                                                                <option value="Ethiopia">Ethiopia</option>
+                                                                <option value="Falkland Islands (Malvinas)">Falkland
+                                                                    Islands (Malvinas)</option>
+                                                                <option value="Faroe Islands">Faroe Islands</option>
+                                                                <option value="Fiji">Fiji</option>
+                                                                <option value="Finland">Finland</option>
+                                                                <option value="France">France</option>
+                                                                <option value="French Guiana">French Guiana</option>
+                                                                <option value="French Polynesia">French Polynesia
+                                                                </option>
+                                                                <option value="French Southern Territories">French
+                                                                    Southern Territories</option>
+                                                                <option value="Gabon">Gabon</option>
+                                                                <option value="Gambia">Gambia</option>
+                                                                <option value="Georgia">Georgia</option>
+                                                                <option value="Germany">Germany</option>
+                                                                <option value="Ghana">Ghana</option>
+                                                                <option value="Gibraltar">Gibraltar</option>
+                                                                <option value="Greece">Greece</option>
+                                                                <option value="Greenland">Greenland</option>
+                                                                <option value="Grenada">Grenada</option>
+                                                                <option value="Guadeloupe">Guadeloupe</option>
+                                                                <option value="Guam">Guam</option>
+                                                                <option value="Guatemala">Guatemala</option>
+                                                                <option value="Guinea">Guinea</option>
+                                                                <option value="Guinea-bissau">Guinea-bissau</option>
+                                                                <option value="Guyana">Guyana</option>
+                                                                <option value="Haiti">Haiti</option>
+                                                                <option value="Heard Island and Mcdonald Islands">Heard
+                                                                    Island and Mcdonald Islands</option>
+                                                                <option value="Holy See (Vatican City State)">Holy See
+                                                                    (Vatican City State)</option>
+                                                                <option value="Honduras">Honduras</option>
+                                                                <option value="Hong Kong">Hong Kong</option>
+                                                                <option value="Hungary">Hungary</option>
+                                                                <option value="Iceland">Iceland</option>
+                                                                <option value="India">India</option>
+                                                                <option value="Indonesia">Indonesia</option>
+                                                                <option value="Iran, Islamic Republic of">Iran, Islamic
+                                                                    Republic of</option>
+                                                                <option value="Iraq">Iraq</option>
+                                                                <option value="Ireland">Ireland</option>
+                                                                <option value="Israel">Israel</option>
+                                                                <option value="Italy">Italy</option>
+                                                                <option value="Jamaica">Jamaica</option>
+                                                                <option value="Japan">Japan</option>
+                                                                <option value="Jordan">Jordan</option>
+                                                                <option value="Kazakhstan">Kazakhstan</option>
+                                                                <option value="Kenya">Kenya</option>
+                                                                <option value="Kiribati">Kiribati</option>
+                                                                <option value="Korea, Democratic People's Republic of">
+                                                                    Korea, Democratic People's Republic of</option>
+                                                                <option value="Korea, Republic of">Korea, Republic of
+                                                                </option>
+                                                                <option value="Kuwait">Kuwait</option>
+                                                                <option value="Kyrgyzstan">Kyrgyzstan</option>
+                                                                <option value="Lao People's Democratic Republic">Lao
+                                                                    People's Democratic Republic</option>
+                                                                <option value="Latvia">Latvia</option>
+                                                                <option value="Lebanon">Lebanon</option>
+                                                                <option value="Lesotho">Lesotho</option>
+                                                                <option value="Liberia">Liberia</option>
+                                                                <option value="Libyan Arab Jamahiriya">Libyan Arab
+                                                                    Jamahiriya</option>
+                                                                <option value="Liechtenstein">Liechtenstein</option>
+                                                                <option value="Lithuania">Lithuania</option>
+                                                                <option value="Luxembourg">Luxembourg</option>
+                                                                <option value="Macao">Macao</option>
+                                                                <option value="North Macedonia">North Macedonia</option>
+                                                                <option value="Madagascar">Madagascar</option>
+                                                                <option value="Malawi">Malawi</option>
+                                                                <option value="Malaysia">Malaysia</option>
+                                                                <option value="Maldives">Maldives</option>
+                                                                <option value="Mali">Mali</option>
+                                                                <option value="Malta">Malta</option>
+                                                                <option value="Marshall Islands">Marshall Islands
+                                                                </option>
+                                                                <option value="Martinique">Martinique</option>
+                                                                <option value="Mauritania">Mauritania</option>
+                                                                <option value="Mauritius">Mauritius</option>
+                                                                <option value="Mayotte">Mayotte</option>
+                                                                <option value="Mexico">Mexico</option>
+                                                                <option value="Micronesia, Federated States of">
+                                                                    Micronesia, Federated States of</option>
+                                                                <option value="Moldova, Republic of">Moldova, Republic
+                                                                    of</option>
+                                                                <option value="Monaco">Monaco</option>
+                                                                <option value="Mongolia">Mongolia</option>
+                                                                <option value="Montserrat">Montserrat</option>
+                                                                <option value="Morocco">Morocco</option>
+                                                                <option value="Mozambique">Mozambique</option>
+                                                                <option value="Myanmar">Myanmar</option>
+                                                                <option value="Namibia">Namibia</option>
+                                                                <option value="Nauru">Nauru</option>
+                                                                <option value="Nepal">Nepal</option>
+                                                                <option value="Netherlands">Netherlands</option>
+                                                                <option value="Netherlands Antilles">Netherlands
+                                                                    Antilles</option>
+                                                                <option value="New Caledonia">New Caledonia</option>
+                                                                <option value="New Zealand">New Zealand</option>
+                                                                <option value="Nicaragua">Nicaragua</option>
+                                                                <option value="Niger">Niger</option>
+                                                                <option value="Nigeria">Nigeria</option>
+                                                                <option value="Niue">Niue</option>
+                                                                <option value="Norfolk Island">Norfolk Island</option>
+                                                                <option value="Northern Mariana Islands">Northern
+                                                                    Mariana Islands</option>
+                                                                <option value="Norway">Norway</option>
+                                                                <option value="Oman">Oman</option>
+                                                                <option value="Pakistan">Pakistan</option>
+                                                                <option value="Palau">Palau</option>
+                                                                <option value="Palestinian Territory, Occupied">
+                                                                    Palestinian Territory, Occupied</option>
+                                                                <option value="Panama">Panama</option>
+                                                                <option value="Papua New Guinea">Papua New Guinea
+                                                                </option>
+                                                                <option value="Paraguay">Paraguay</option>
+                                                                <option value="Peru">Peru</option>
+                                                                <option value="Philippines">Philippines</option>
+                                                                <option value="Pitcairn">Pitcairn</option>
+                                                                <option value="Poland">Poland</option>
+                                                                <option value="Portugal">Portugal</option>
+                                                                <option value="Puerto Rico">Puerto Rico</option>
+                                                                <option value="Qatar">Qatar</option>
+                                                                <option value="Reunion">Reunion</option>
+                                                                <option value="Romania">Romania</option>
+                                                                <option value="Russian Federation">Russian Federation
+                                                                </option>
+                                                                <option value="Rwanda">Rwanda</option>
+                                                                <option value="Saint Helena">Saint Helena</option>
+                                                                <option value="Saint Kitts and Nevis">Saint Kitts and
+                                                                    Nevis</option>
+                                                                <option value="Saint Lucia">Saint Lucia</option>
+                                                                <option value="Saint Pierre and Miquelon">Saint Pierre
+                                                                    and Miquelon</option>
+                                                                <option value="Saint Vincent and The Grenadines">Saint
+                                                                    Vincent and The Grenadines</option>
+                                                                <option value="Samoa">Samoa</option>
+                                                                <option value="San Marino">San Marino</option>
+                                                                <option value="Sao Tome and Principe">Sao Tome and
+                                                                    Principe</option>
+                                                                <option value="Saudi Arabia">Saudi Arabia</option>
+                                                                <option value="Senegal">Senegal</option>
+                                                                <option value="Serbia and Montenegro">Serbia and
+                                                                    Montenegro</option>
+                                                                <option value="Seychelles">Seychelles</option>
+                                                                <option value="Sierra Leone">Sierra Leone</option>
+                                                                <option value="Singapore">Singapore</option>
+                                                                <option value="Slovakia">Slovakia</option>
+                                                                <option value="Slovenia">Slovenia</option>
+                                                                <option value="Solomon Islands">Solomon Islands</option>
+                                                                <option value="Somalia">Somalia</option>
+                                                                <option value="South Africa">South Africa</option>
+                                                                <option
+                                                                    value="South Georgia and The South Sandwich Islands">
+                                                                    South Georgia and The South Sandwich Islands
+                                                                </option>
+                                                                <option value="Spain">Spain</option>
+                                                                <option value="Sri Lanka">Sri Lanka</option>
+                                                                <option value="Sudan">Sudan</option>
+                                                                <option value="Suriname">Suriname</option>
+                                                                <option value="Svalbard and Jan Mayen">Svalbard and Jan
+                                                                    Mayen</option>
+                                                                <option value="Swaziland">Swaziland</option>
+                                                                <option value="Sweden">Sweden</option>
+                                                                <option value="Switzerland">Switzerland</option>
+                                                                <option value="Syrian Arab Republic">Syrian Arab
+                                                                    Republic</option>
+                                                                <option value="Taiwan, Province of China">Taiwan,
+                                                                    Province of China</option>
+                                                                <option value="Tajikistan">Tajikistan</option>
+                                                                <option value="Tanzania, United Republic of">Tanzania,
+                                                                    United Republic of</option>
+                                                                <option value="Thailand">Thailand</option>
+                                                                <option value="Timor-leste">Timor-leste</option>
+                                                                <option value="Togo">Togo</option>
+                                                                <option value="Tokelau">Tokelau</option>
+                                                                <option value="Tonga">Tonga</option>
+                                                                <option value="Trinidad and Tobago">Trinidad and Tobago
+                                                                </option>
+                                                                <option value="Tunisia">Tunisia</option>
+                                                                <option value="Turkey">Turkey</option>
+                                                                <option value="Turkmenistan">Turkmenistan</option>
+                                                                <option value="Turks and Caicos Islands">Turks and
+                                                                    Caicos Islands</option>
+                                                                <option value="Tuvalu">Tuvalu</option>
+                                                                <option value="Uganda">Uganda</option>
+                                                                <option value="Ukraine">Ukraine</option>
+                                                                <option value="United Arab Emirates">United Arab
+                                                                    Emirates</option>
+                                                                <option value="United Kingdom">United Kingdom</option>
+                                                                <option value="United States">United States</option>
+                                                                <option value="United States Minor Outlying Islands">
+                                                                    United States Minor Outlying Islands</option>
+                                                                <option value="Uruguay">Uruguay</option>
+                                                                <option value="Uzbekistan">Uzbekistan</option>
+                                                                <option value="Vanuatu">Vanuatu</option>
+                                                                <option value="Venezuela">Venezuela</option>
+                                                                <option value="Viet Nam">Viet Nam</option>
+                                                                <option value="Virgin Islands, British">Virgin Islands,
+                                                                    British</option>
+                                                                <option value="Virgin Islands, U.S.">Virgin Islands,
+                                                                    U.S.</option>
+                                                                <option value="Wallis and Futuna">Wallis and Futuna
+                                                                </option>
+                                                                <option value="Western Sahara">Western Sahara</option>
+                                                                <option value="Yemen">Yemen</option>
+                                                                <option value="Zambia">Zambia</option>
+                                                                <option value="Zimbabwe">Zimbabwe</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="col-4 col-sm-3 col-lg-2 py-1">
+                                                            <label for="inputZip" class="form-label">CAP</label>
+                                                            <input type="text" class="form-control" id="inputZip">
+                                                        </div>
+                                                        <div class="col-12 py-1">
+                                                            <div class="mb-3">
+                                                                <label for="formFile" class="form-label">Foto</label>
+                                                                <input class="form-control" type="file" id="formFile">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12">
+                                                            <div class="form-check">
+                                                                <input class="form-check-input" type="checkbox"
+                                                                    id="gridCheck">
+                                                                <label class="form-check-label" for="gridCheck">
+                                                                    Seleziona per proseguire
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12 py-2">
+                                                            <button type="submit" class="btn btn-primary">Salva</button>
+                                                            <button type="submit"
+                                                                class="btn btn-warning">Svuota</button>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- COURSE TITLE + CHIPS -->
+                                <div class="col-12 col-md-4 col-lg-6 py-1 py-md-3 order-md-1">
+                                    <div class="row">
+                                        <div class="col-12 d-flex align-items-center">
+                                            <h4>Boolean</h4>
+                                            <span class="badge rounded-pill bg-info ms-3">Piano blaze</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <span class="badge rounded-pill bg-info">3 app</span>
+                                            <i class="fa-solid fa-angles-right fa-xs"></i>
+
+                                            <div class="dropdown d-inline-block d-lg-none">
+                                                <button
+                                                    class="btn badge rounded-pill bg-info dropdown-toggle text-white type="
+                                                    button" data-bs-toggle="dropdown" aria-expanded="false">+</button>
+                                                <ul class="dropdown-menu">
+                                                    <li><a class="dropdown-item" href="#">Boolean mobile app</a></li>
+                                                    <li><a class="dropdown-item" href="#">Boolean web app</a></li>
+                                                    <li><a class="dropdown-item" href="#">Boolean blog app</a></li>
+                                                </ul>
+                                            </div>
+
+                                            <div class="d-none d-lg-inline">
+                                                <span class="badge rounded-pill bg-info">Boolean mobile app</span>
+                                                <span class="badge rounded-pill bg-info">Boolean web app</span>
+                                                <span class="badge rounded-pill bg-info">Boolean blog app</span>
                                             </div>
                                         </div>
                                     </div>
-    
-                                    <div class="col-12 col-md-4 col-lg-6 py-1 py-md-3 order-md-1">
-                                        <div class="row">
-                                            <div class="col-12 d-flex align-items-center">
-                                                <h4>Boolean</h4>
-                                                <span class="badge rounded-pill bg-info ms-3">Piano blaze</span>
-                                            </div>
-                                        </div>
-    
-                                        <div class="row">
-                                            <div class="col-12">
-                                                <span class="badge rounded-pill bg-info">3 app</span>
-                                                <i class="fa-solid fa-angles-right fa-xs"></i>
-    
-                                                <div class="dropdown d-inline-block d-lg-none">
-                                                    <button
-                                                        class="btn badge rounded-pill bg-info dropdown-toggle text-white type="
-                                                        button" data-bs-toggle="dropdown" aria-expanded="false">+</button>
-                                                    <ul class="dropdown-menu">
-                                                        <li><a class="dropdown-item" href="#">Boolean mobile app</a></li>
-                                                        <li><a class="dropdown-item" href="#">Boolean web app</a></li>
-                                                        <li><a class="dropdown-item" href="#">Boolean blog app</a></li>
-                                                    </ul>
-                                                </div>
-    
-                                                <div class="d-none d-lg-inline">
-                                                    <span class="badge rounded-pill bg-info">Boolean mobile app</span>
-                                                    <span class="badge rounded-pill bg-info">Boolean web app</span>
-                                                    <span class="badge rounded-pill bg-info">Boolean blog app</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-    
-                                    <div class="col-12 col-md-4 col-lg-3 py-1 py-md-3 order-md-2">
-                                        <div class="row">
-                                            <div class="col-12">
-                                                <span class="course_headerItem fw-medium">Studenti online negli ultimi 30
-                                                    minuti</span>
-                                                <h5>125</h5>
-                                            </div>
+                                </div>
+
+                                <!-- ONLINE STUDENTS -->
+                                <div class="col-12 col-md-4 col-lg-3 py-1 py-md-3 order-md-2">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <span class="my_fs_075 fw-medium">Studenti online negli ultimi 30
+                                                minuti</span>
+                                            <h5>125</h5>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-    
-    
-                        <!-- COURSE CONTENT -->
-                        <div id="course_content" class="row">
+                    </div>
 
-                            <div class="col-12 col-md-7 py-3">
 
-                                <!-- TABLE -->
-                                <div class="card pb-2 mb-3">
-                                    <div class="card-header">
-                                        <h4>Prossime classi</h4>
-                                    </div>
-                                    <table class="table table-hover my_fs_07">
-                                        <thead>
-                                            <tr>
-                                                <th scope="col">Nome</th>
-                                                <th scope="col"></th>
-                                                <th scope="col" class="text-center d-none d-md-table-cell">Data inizio</th>
-                                                <th scope="col" class="text-center d-none d-md-table-cell">ROI</th>
-                                                <th scope="col" class="text-center">Stato</th>
-                                                <th scope="col" class="text-center">Azioni</th>
-                                            </tr>
-                                        </thead>
-    
-                                        <tbody>
-                                            <tr>
-                                                <td>
-                                                    <img class="me-1" src="img/class-avatar.jpg" alt="">
-                                                    <span class="fw-semibold">Classe 75</span>
-                                                </td>
-                                                <td></td>
-                                                <td class="text-center d-none d-md-table-cell">15 Feb 2021</td>
-                                                <td class="text-center d-none d-md-table-cell">20%</td>
-                                                <td class="text-center">
-                                                    <span class="badge text-bg-success">Done</button>
-                                                </td>
-                                                <td class="text-center">
-                                                    <button class="btn btn-outline-secondary">
-                                                        <i class="fas fa-pencil fa-xs"></i>
-                                                    </button>
-                                                    <button class="btn btn-outline-secondary">
-                                                        <i class="fas fa-trash fa-xs"></i>
-                                                    </button>
-                                                </td>
-                                            </tr>
-    
-                                            <tr>
-                                                <td>
-                                                    <img class="me-1" src="img/class-avatar.jpg" alt="">
-                                                    <span class="fw-semibold">Classe 76</span>
-                                                </td>
-                                                <td></td>
-                                                <td class="text-center d-none d-md-table-cell">16 Feb 2021</td>
-                                                <td class="text-center d-none d-md-table-cell">20%</td>
-                                                <td class="text-center">
-                                                    <span class="badge text-bg-success">Done</button>
-                                                </td>
-                                                <td class="text-center">
-                                                    <button class="btn btn-outline-secondary">
-                                                        <i class="fas fa-pencil fa-xs"></i>
-                                                    </button>
-                                                    <button class="btn btn-outline-secondary">
-                                                        <i class="fas fa-trash fa-xs"></i>
-                                                    </button>
-                                                </td>
-                                            </tr>
-    
-                                            <tr>
-                                                <td>
-                                                    <img class="me-1" src="img/class-avatar.jpg" alt="">
-                                                    <span class="fw-semibold">Classe 77</span>
-                                                </td>
-                                                <td></td>
-                                                <td class="text-center d-none d-md-table-cell">17 Feb 2021</td>
-                                                <td class="text-center d-none d-md-table-cell">20%</td>
-                                                <td class="text-center">
-                                                    <span class="badge text-bg-warning">Process</button>
-                                                </td>
-                                                <td class="text-center">
-                                                    <button class="btn btn-outline-secondary">
-                                                        <i class="fas fa-pencil fa-xs"></i>
-                                                    </button>
-                                                    <button class="btn btn-outline-secondary">
-                                                        <i class="fas fa-trash fa-xs"></i>
-                                                    </button>
-                                                </td>
-                                            </tr>
-    
-                                            <tr>
-                                                <td>
-                                                    <img class="me-1" src="img/class-avatar.jpg" alt="">
-                                                    <span class="fw-semibold">Classe 78</span>
-                                                </td>
-                                                <td></td>
-                                                <td class="text-center d-none d-md-table-cell">18 Feb 2021</td>
-                                                <td class="text-center d-none d-md-table-cell">20%</td>
-                                                <td class="text-center">
-                                                    <span class="badge text-bg-success">Done</button>
-                                                </td>
-                                                <td class="text-center">
-                                                    <button class="btn btn-outline-secondary">
-                                                        <i class="fas fa-pencil fa-xs"></i>
-                                                    </button>
-                                                    <button class="btn btn-outline-secondary">
-                                                        <i class="fas fa-trash fa-xs"></i>
-                                                    </button>
-                                                </td>
-                                            </tr>
-    
-                                            <tr>
-                                                <td>
-                                                    <img class="me-1" src="img/class-avatar.jpg" alt="">
-                                                    <span class="fw-semibold">Classe 79</span>
-                                                </td>
-                                                <td></td>
-                                                <td class="text-center d-none d-md-table-cell">19 Feb 2021</td>
-                                                <td class="text-center d-none d-md-table-cell">20%</td>
-                                                <td class="text-center">
-                                                    <span class="badge text-bg-danger">Failed</button>
-                                                </td>
-                                                <td class="text-center">
-                                                    <button class="btn btn-outline-secondary">
-                                                        <i class="fas fa-pencil fa-xs"></i>
-                                                    </button>
-                                                    <button class="btn btn-outline-secondary">
-                                                        <i class="fas fa-trash fa-xs"></i>
-                                                    </button>
-                                                </td>
-                                            </tr>
-    
-                                            <tr>
-                                                <td>
-                                                    <img class="me-1" src="img/class-avatar.jpg" alt="">
-                                                    <span class="fw-semibold">Classe 80</span>
-                                                </td>
-                                                <td></td>
-                                                <td class="text-center d-none d-md-table-cell">20 Feb 2021</td>
-                                                <td class="text-center d-none d-md-table-cell">20%</td>
-                                                <td class="text-center">
-                                                    <span class="badge text-bg-success">Done</span>
-                                                </td>
-                                                <td class="text-center">
-                                                    <button class="btn btn-outline-secondary">
-                                                        <i class="fas fa-pencil fa-xs"></i>
-                                                    </button>
-                                                    <button class="btn btn-outline-secondary">
-                                                        <i class="fas fa-trash fa-xs"></i>
-                                                    </button>
-                                                </td>
-                                            </tr>
-    
-                                            <tr>
-                                                <td>
-                                                    <img class="me-1" src="img/class-avatar.jpg" alt="">
-                                                    <span class="fw-semibold">Classe 81</span>
-                                                </td>
-                                                <td></td>
-                                                <td class="text-center d-none d-md-table-cell">21 Feb 2021</td>
-                                                <td class="text-center d-none d-md-table-cell">20%</td>
-                                                <td class="text-center">
-                                                    <span class="badge text-bg-danger">Failed</span>
-                                                </td>
-                                                <td class="text-center">
-                                                    <button class="btn btn-outline-secondary">
-                                                        <i class="fas fa-pencil fa-xs"></i>
-                                                    </button>
-                                                    <button class="btn btn-outline-secondary">
-                                                        <i class="fas fa-trash fa-xs"></i>
-                                                    </button>
-                                                </td>
-                                            </tr>
-    
-                                            <tr>
-                                                <td>
-                                                    <img class="me-1" src="img/class-avatar.jpg" alt="">
-                                                    <span class="fw-semibold">Classe 82</span>
-                                                </td>
-                                                <td></td>
-                                                <td class="text-center d-none d-md-table-cell">22 Feb 2021</td>
-                                                <td class="text-center d-none d-md-table-cell">20%</td>
-                                                <td class="text-center">
-                                                    <span class="badge text-bg-success">Done</span>
-                                                </td>
-                                                <td class="text-center">
-                                                    <button class="btn btn-outline-secondary">
-                                                        <i class="fas fa-pencil fa-xs"></i>
-                                                    </button>
-                                                    <button class="btn btn-outline-secondary">
-                                                        <i class="fas fa-trash fa-xs"></i>
-                                                    </button>
-                                                </td>
-                                            </tr>
-    
-                                        </tbody>
-                                    </table>
+                    <!-- COURSE CONTENT -->
+                    <div id="course_content" class="row">
+
+                        <div class="col-12 col-md-7 py-3">
+
+                            <!-- TABLE -->
+                            <div class="card pb-2 mb-3">
+                                <div class="card-header">
+                                    <h4>Prossime classi</h4>
                                 </div>
-    
-                                <!-- FAQ -->
-                                <div class="card mb-3">
-                                    <div class="card-header">
-                                        <h4>F.A.Q.</h4>
-                                    </div>
-                                    <div class="accordion">
-                                        <div class="accordion-item">
-                                            <h2 class="accordion-header">
-                                                <button class=" my_fs_07 accordion-button collapsed fw-semibold my_fs_07" type="button" data-bs-toggle="collapse"
-                                                    data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                                    Come aggiungere un nuovo studente?
+                                <table class="table table-hover my_fs_07">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Nome</th>
+                                            <th scope="col"></th>
+                                            <th scope="col" class="text-center d-none d-md-table-cell">Data inizio</th>
+                                            <th scope="col" class="text-center d-none d-md-table-cell">ROI</th>
+                                            <th scope="col" class="text-center">Stato</th>
+                                            <th scope="col" class="text-center">Azioni</th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <img class="me-1" src="img/class-avatar.jpg" alt="">
+                                                <span class="fw-semibold">Classe 75</span>
+                                            </td>
+                                            <td></td>
+                                            <td class="text-center d-none d-md-table-cell">15 Feb 2021</td>
+                                            <td class="text-center d-none d-md-table-cell">20%</td>
+                                            <td class="text-center">
+                                                <span class="badge text-bg-success">Done</button>
+                                            </td>
+                                            <td class="text-center">
+                                                <button class="btn btn-outline-secondary">
+                                                    <i class="fas fa-pencil fa-xs"></i>
                                                 </button>
-                                            </h2>
-                                            <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                                                <div class="accordion-body my_fs_07">
-                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, fugit, maiores cumque ullam
-                                                    ratione sapiente inventore enim, ipsa minus dolorum nam iusto sint culpa placeat. Delectus sed
-                                                    error voluptas ipsa facere sint vitae deleniti eveniet labore? Magnam atque exercitationem quas
-                                                    odit? Veniam aperiam totam commodi eligendi. Lorem ipsum dolor sit amet consectetur, adipisicing
-                                                    elit. Et sint vel officia aliquid ratione quis?
-                                                </div>
-                                            </div>
-                                        </div>
-                                
-                                        <div class="accordion-item">
-                                            <h2 class="accordion-header">
-                                                <button class="accordion-button collapsed fw-semibold my_fs_07" type="button" data-bs-toggle="collapse"
-                                                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                                    Come posso accedere alle informazioni del mio account?
+                                                <button class="btn btn-outline-secondary">
+                                                    <i class="fas fa-trash fa-xs"></i>
                                                 </button>
-                                            </h2>
-                                            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                                                <div class="accordion-body my_fs_07">
-                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis earum cupiditate sint unde
-                                                    et suscipit reprehenderit, consectetur rem culpa nam rerum sunt itaque tenetur, cumque a
-                                                    architecto expedita possimus dolor voluptatum ullam non autem assumenda animi. Dolor voluptates
-                                                    consectetur consequatur libero! Dolorem distinctio soluta consequuntur!
-                                                </div>
-                                            </div>
-                                        </div>
-                                
-                                        <div class="accordion-item">
-                                            <h2 class="accordion-header">
-                                                <button class="accordion-button collapsed fw-semibold my_fs_07" type="button" data-bs-toggle="collapse"
-                                                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                                    Posso isare questa dashboard da mobile?
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>
+                                                <img class="me-1" src="img/class-avatar.jpg" alt="">
+                                                <span class="fw-semibold">Classe 76</span>
+                                            </td>
+                                            <td></td>
+                                            <td class="text-center d-none d-md-table-cell">16 Feb 2021</td>
+                                            <td class="text-center d-none d-md-table-cell">20%</td>
+                                            <td class="text-center">
+                                                <span class="badge text-bg-success">Done</button>
+                                            </td>
+                                            <td class="text-center">
+                                                <button class="btn btn-outline-secondary">
+                                                    <i class="fas fa-pencil fa-xs"></i>
                                                 </button>
-                                            </h2>
-                                            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                                                <div class="accordion-body my_fs_07">
-                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit cumque aliquid eius ducimus!
-                                                    Facilis quae consequuntur atque est eos exercitationem voluptatem odio veniam dolorem. Expedita
-                                                    pariatur aliquam voluptate aperiam!
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-    
+                                                <button class="btn btn-outline-secondary">
+                                                    <i class="fas fa-trash fa-xs"></i>
+                                                </button>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>
+                                                <img class="me-1" src="img/class-avatar.jpg" alt="">
+                                                <span class="fw-semibold">Classe 77</span>
+                                            </td>
+                                            <td></td>
+                                            <td class="text-center d-none d-md-table-cell">17 Feb 2021</td>
+                                            <td class="text-center d-none d-md-table-cell">20%</td>
+                                            <td class="text-center">
+                                                <span class="badge text-bg-warning">Process</button>
+                                            </td>
+                                            <td class="text-center">
+                                                <button class="btn btn-outline-secondary">
+                                                    <i class="fas fa-pencil fa-xs"></i>
+                                                </button>
+                                                <button class="btn btn-outline-secondary">
+                                                    <i class="fas fa-trash fa-xs"></i>
+                                                </button>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>
+                                                <img class="me-1" src="img/class-avatar.jpg" alt="">
+                                                <span class="fw-semibold">Classe 78</span>
+                                            </td>
+                                            <td></td>
+                                            <td class="text-center d-none d-md-table-cell">18 Feb 2021</td>
+                                            <td class="text-center d-none d-md-table-cell">20%</td>
+                                            <td class="text-center">
+                                                <span class="badge text-bg-success">Done</button>
+                                            </td>
+                                            <td class="text-center">
+                                                <button class="btn btn-outline-secondary">
+                                                    <i class="fas fa-pencil fa-xs"></i>
+                                                </button>
+                                                <button class="btn btn-outline-secondary">
+                                                    <i class="fas fa-trash fa-xs"></i>
+                                                </button>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>
+                                                <img class="me-1" src="img/class-avatar.jpg" alt="">
+                                                <span class="fw-semibold">Classe 79</span>
+                                            </td>
+                                            <td></td>
+                                            <td class="text-center d-none d-md-table-cell">19 Feb 2021</td>
+                                            <td class="text-center d-none d-md-table-cell">20%</td>
+                                            <td class="text-center">
+                                                <span class="badge text-bg-danger">Failed</button>
+                                            </td>
+                                            <td class="text-center">
+                                                <button class="btn btn-outline-secondary">
+                                                    <i class="fas fa-pencil fa-xs"></i>
+                                                </button>
+                                                <button class="btn btn-outline-secondary">
+                                                    <i class="fas fa-trash fa-xs"></i>
+                                                </button>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>
+                                                <img class="me-1" src="img/class-avatar.jpg" alt="">
+                                                <span class="fw-semibold">Classe 80</span>
+                                            </td>
+                                            <td></td>
+                                            <td class="text-center d-none d-md-table-cell">20 Feb 2021</td>
+                                            <td class="text-center d-none d-md-table-cell">20%</td>
+                                            <td class="text-center">
+                                                <span class="badge text-bg-success">Done</span>
+                                            </td>
+                                            <td class="text-center">
+                                                <button class="btn btn-outline-secondary">
+                                                    <i class="fas fa-pencil fa-xs"></i>
+                                                </button>
+                                                <button class="btn btn-outline-secondary">
+                                                    <i class="fas fa-trash fa-xs"></i>
+                                                </button>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>
+                                                <img class="me-1" src="img/class-avatar.jpg" alt="">
+                                                <span class="fw-semibold">Classe 81</span>
+                                            </td>
+                                            <td></td>
+                                            <td class="text-center d-none d-md-table-cell">21 Feb 2021</td>
+                                            <td class="text-center d-none d-md-table-cell">20%</td>
+                                            <td class="text-center">
+                                                <span class="badge text-bg-danger">Failed</span>
+                                            </td>
+                                            <td class="text-center">
+                                                <button class="btn btn-outline-secondary">
+                                                    <i class="fas fa-pencil fa-xs"></i>
+                                                </button>
+                                                <button class="btn btn-outline-secondary">
+                                                    <i class="fas fa-trash fa-xs"></i>
+                                                </button>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>
+                                                <img class="me-1" src="img/class-avatar.jpg" alt="">
+                                                <span class="fw-semibold">Classe 82</span>
+                                            </td>
+                                            <td></td>
+                                            <td class="text-center d-none d-md-table-cell">22 Feb 2021</td>
+                                            <td class="text-center d-none d-md-table-cell">20%</td>
+                                            <td class="text-center">
+                                                <span class="badge text-bg-success">Done</span>
+                                            </td>
+                                            <td class="text-center">
+                                                <button class="btn btn-outline-secondary">
+                                                    <i class="fas fa-pencil fa-xs"></i>
+                                                </button>
+                                                <button class="btn btn-outline-secondary">
+                                                    <i class="fas fa-trash fa-xs"></i>
+                                                </button>
+                                            </td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
                             </div>
-    
-    
-                            <div class="col-12 col-md-5 py-3">
-                                <div class="card mb-3">
-                                    <div class="card-header">
-                                      <h4>Todo</h4>
-                                    </div>
-                                    <ul class="list-group">
-                                        <li class="list-group-item">
-                                          <input class="form-check-input me-1" type="checkbox" id="firstCheckbox">
-                                          <label class="form-check-label my_fs_07 fw-semibold" for="firstCheckbox">Kickoff nuove classi</label>
-                                        </li>
-                                        <li class="list-group-item">
-                                          <input class="form-check-input me-1" type="checkbox" id="secondCheckbox">
-                                          <label class="form-check-label my_fs_07 fw-semibold" for="secondCheckbox">Lezione su Bootstrap 5 in classe #75</label>
-                                        </li>
-                                        <li class="list-group-item">
-                                          <input class="form-check-input me-1" type="checkbox" id="thirdCheckbox">
-                                          <label class="form-check-label my_fs_07 fw-semibold" for="thirdCheckbox">Controllare username github studenti</label>
-                                        </li>
-                                    </ul>                                           
+
+                            <!-- FAQ -->
+                            <div class="card mb-3">
+                                <div class="card-header">
+                                    <h4>F.A.Q.</h4>
                                 </div>
-
-
-                                <div class="card">
-                                    <img src="img/stats.jpeg" class="card-img-top" alt="Active users chart">
-                                    <div class="card-body">
-                                      <h5 class="card-title">Utenti attivi</h5>
-                                      <p class="card-text my_fs_07 fw-semibold">Lista degli utenti attivi in piattaforma nell'ultimo mese</p>
+                                <div class="accordion">
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class=" my_fs_07 accordion-button collapsed fw-semibold my_fs_07"
+                                                type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                                                aria-expanded="true" aria-controls="collapseOne">
+                                                Come aggiungere un nuovo studente?
+                                            </button>
+                                        </h2>
+                                        <div id="collapseOne" class="accordion-collapse collapse"
+                                            data-bs-parent="#accordionExample">
+                                            <div class="accordion-body my_fs_07">
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, fugit,
+                                                maiores cumque ullam
+                                                ratione sapiente inventore enim, ipsa minus dolorum nam iusto sint culpa
+                                                placeat. Delectus sed
+                                                error voluptas ipsa facere sint vitae deleniti eveniet labore? Magnam
+                                                atque exercitationem quas
+                                                odit? Veniam aperiam totam commodi eligendi. Lorem ipsum dolor sit amet
+                                                consectetur, adipisicing
+                                                elit. Et sint vel officia aliquid ratione quis?
+                                            </div>
+                                        </div>
                                     </div>
-                                    <ul class="list-group list-group-flush">
-                                        <li class="list-group-item my_fs_07 fw-semibold">
-                                            Gennaio: 1200
-                                        </li>
-                                        <li class="list-group-item my_fs_07 fw-semibold">
-                                            Febbraio: 800
-                                        </li>
-                                        <li class="list-group-item my_fs_07 fw-semibold">
-                                            Marzo: 1500
-                                        </li>
-                                    </ul>
-                                    <div class="card-body">
-                                        <a href="#" class="card-link my_fs_07 fw-semibold">Visualizza report approfondito</a>
+
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed fw-semibold my_fs_07"
+                                                type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+                                                aria-expanded="false" aria-controls="collapseTwo">
+                                                Come posso accedere alle informazioni del mio account?
+                                            </button>
+                                        </h2>
+                                        <div id="collapseTwo" class="accordion-collapse collapse"
+                                            data-bs-parent="#accordionExample">
+                                            <div class="accordion-body my_fs_07">
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis
+                                                earum cupiditate sint unde
+                                                et suscipit reprehenderit, consectetur rem culpa nam rerum sunt itaque
+                                                tenetur, cumque a
+                                                architecto expedita possimus dolor voluptatum ullam non autem assumenda
+                                                animi. Dolor voluptates
+                                                consectetur consequatur libero! Dolorem distinctio soluta consequuntur!
+                                            </div>
+                                        </div>
                                     </div>
 
-                                  </div>
-    
-    
-
-
-    
-    
-    
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed fw-semibold my_fs_07"
+                                                type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree"
+                                                aria-expanded="false" aria-controls="collapseThree">
+                                                Posso isare questa dashboard da mobile?
+                                            </button>
+                                        </h2>
+                                        <div id="collapseThree" class="accordion-collapse collapse"
+                                            data-bs-parent="#accordionExample">
+                                            <div class="accordion-body my_fs_07">
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit cumque
+                                                aliquid eius ducimus!
+                                                Facilis quae consequuntur atque est eos exercitationem voluptatem odio
+                                                veniam dolorem. Expedita
+                                                pariatur aliquam voluptate aperiam!
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-    
+
                         </div>
-    
-    
-    
-    
-    
-    
-                    </section>
-    
-    
-    
-                </div>
-    
-    
-    
-    
-            </main>
-            
-        
 
-        </div>
+                        <div class="col-12 col-md-5 py-3">
 
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+                            <!-- CHECKBOX LIST -->
+                            <div class="card mb-3">
+                                <div class="card-header">
+                                    <h4>Todo</h4>
+                                </div>
+                                <ul class="list-group">
+                                    <li class="list-group-item">
+                                        <input class="form-check-input me-1" type="checkbox" id="firstCheckbox">
+                                        <label class="form-check-label my_fs_07 fw-semibold" for="firstCheckbox">Kickoff nuove classi</label>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <input class="form-check-input me-1" type="checkbox" id="secondCheckbox">
+                                        <label class="form-check-label my_fs_07 fw-semibold"
+                                            for="secondCheckbox">Lezione su Bootstrap 5 in classe #75</label>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <input class="form-check-input me-1" type="checkbox" id="thirdCheckbox">
+                                        <label class="form-check-label my_fs_07 fw-semibold"
+                                            for="thirdCheckbox">Controllare username github studenti</label>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <!-- STATS -->
+                            <div class="card">
+                                <img src="img/stats.jpeg" class="card-img-top" alt="Active users chart">
+                                <div class="card-body">
+                                    <h5 class="card-title">Utenti attivi</h5>
+                                    <p class="card-text my_fs_07 fw-semibold">Lista degli utenti attivi in piattaforma nell'ultimo mese</p>
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item my_fs_07 fw-semibold">
+                                        Gennaio: 1200
+                                    </li>
+                                    <li class="list-group-item my_fs_07 fw-semibold">
+                                        Febbraio: 800
+                                    </li>
+                                    <li class="list-group-item my_fs_07 fw-semibold">
+                                        Marzo: 1500
+                                    </li>
+                                </ul>
+                                <div class="card-body">
+                                    <a href="#" class="card-link my_fs_07 fw-semibold">Visualizza report approfondito</a>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+            </div>
+
+        </main>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
-    </body>
+</body>
 
 </html>
