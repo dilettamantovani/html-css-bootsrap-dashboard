@@ -43,8 +43,6 @@ header {
     background-image: url(../img/sidebar-bg.png);
 }
 
-.sidebarItem { font-size: 0.8rem; }
-
 .fa-home, .fa-chart-simple, .fa-signal { width: 1.4rem; }
 
 
@@ -69,8 +67,6 @@ header {
 
 /* table */
 
-table { font-size: 0.6rem; }
-
 .w_15 { width: 15rem; }
 
 td { vertical-align: middle; }
@@ -81,6 +77,13 @@ td > button {
     padding: 0.25rem 0.45rem !important;
     font-size: 0.6rem !important;
 }
+
+/********************************** FONT-SIZE **********************************/
+.my_fs_07 { font-size: 0.7rem; }
+
+.my_fs_09 { font-size: 0.9rem; }
+
+
 
 
 /* MQ SIDEBAR: ho provato a farla con il cambio variabile del root ma non funzionava */
