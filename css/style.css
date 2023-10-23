@@ -28,9 +28,12 @@ header {
     border-radius: 6px 0 0 6px;
 }
 
+/* dropdown */
 .fa-bell { color: #FF8F00; }
 
 .dropdown-toggle::after { display: none }
+
+.navbar-nav .dropdown-menu { position: absolute !important; }
 
 
 /********************************** MAIN **********************************/
